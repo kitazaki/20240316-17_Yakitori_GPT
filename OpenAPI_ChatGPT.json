@@ -1,0 +1,36 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Get Yakitori data",
+    "description": "Retrieves current status for Yakitori cooking.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://90a5-182-158-83-180.ngrok-free.app"
+    }
+  ],
+  "paths": {
+    "/yakitori": {
+      "get": {
+        "description": "Get Yakitori",
+        "operationId": "GetYakitori",
+        "parameters": [
+          {
+            "name": "location",
+            "in": "query",
+            "description": "The city and state to retrieve the name of yakitori",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
